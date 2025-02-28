@@ -1,8 +1,6 @@
 
-import { storageService } from '../async-storage.service'
-import { makeId } from '../util.service'
-import { userService } from '../user'
-import { loadFromStorage, saveToStorage } from '../../../services/util.service'
+import { storageService } from '../../../services/async-storage.service'
+import { makeId, loadFromStorage, saveToStorage } from '../../../services/util.service'
 
 const STORAGE_KEY = 'note'
 
@@ -61,7 +59,7 @@ async function save(note) {
             price: note.price,
             speed: note.speed,
             // Later, owner is set by the backend
-            owner: userService.getLoggedinUser(),
+            // owner: userService.getLoggedinUser(),
             msgs: []
         }
         savedNote = await storageService.post(STORAGE_KEY, noteToSave)
