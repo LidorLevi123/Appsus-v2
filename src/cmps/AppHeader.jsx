@@ -19,7 +19,7 @@ export function AppHeader() {
 	}
 
 	return (
-		<header className="app-header full">
+		<header className="app-header main-layout full">
 			<nav>
 				<NavLink to="" className="logo">
 					E2E Demo
