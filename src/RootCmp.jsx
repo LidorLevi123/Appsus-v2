@@ -8,6 +8,7 @@ import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/AboutPage.jsx'
 
 import { NoteIndex } from './apps/note/pages/NoteIndex.jsx'
+import { MailIndex } from './apps/mail/pages/MailIndex.jsx'
 
 export function RootCmp() {
     return (
@@ -18,7 +19,7 @@ export function RootCmp() {
                     <Route path="" element={<HomePage />} />
                     <Route path="about" element={<AboutPage />} />
                     <Route path="note" element={<NoteIndex />} />
-                    {/* <Route path="mail" element={<MailIndex />} /> */}
+                    <Route path="mail" element={<MailIndex />} />
                 </Routes>
             </main>
 
