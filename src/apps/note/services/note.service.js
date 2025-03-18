@@ -81,6 +81,7 @@ function _createNotes() {
                 backgroundColor: '#00d'
             },
             info: {
+                title: 'Study JS',
                 txt: 'Fullstack Me Baby!'
             }
         },
