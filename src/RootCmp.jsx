@@ -12,7 +12,7 @@ import { MailIndex } from './apps/mail/pages/MailIndex.jsx'
 
 export function RootCmp() {
     return (
-        <div className="main-layout">
+        <div className="app-layout">
             <AppHeader />
             <main>
                 <Routes>
