@@ -1,17 +1,22 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { loadNotes } from "../../../store/actions/note.actions"
 import { useSelector } from "react-redux"
 import { NoteList } from "../cmps/NoteList"
 
 export function NoteIndex() {
     const notes = useSelector(state => state.noteModule.notes)
+    const isSidenavExpanded = useSelector(state => state.systemModule.isSidenavExpanded)
 
     useEffect(() => {
         loadNotes()
     }, [])
 
+    const sidenavClass = isSidenavExpanded ? 'expanded' : ''
+
     return (
-        <section className="note-index">
+        <section className="note-index main-layout">
+            {/* <NoteSidenav /> */}
+            <div className={`sidenav ${sidenavClass}`}>sidenav</div>
             <NoteList notes={notes} />
         </section>
     )

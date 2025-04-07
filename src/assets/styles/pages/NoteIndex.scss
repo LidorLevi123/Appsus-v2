@@ -1,0 +1,15 @@
+.note-index {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+
+    pre {
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
+    }
+
+    .sidenav {
+        width: 75px;
+
+        &.expanded {
+            width: 270px;
+        }
+    }
+}

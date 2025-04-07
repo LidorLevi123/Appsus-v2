@@ -1,8 +1,10 @@
 export const LOADING_START = 'LOADING_START'
 export const LOADING_DONE = 'LOADING_DONE'
+export const TOGGLE_SIDENAV = 'TOGGLE_SIDENAV'
 
 const initialState = {
-  isLoading: false
+  isLoading: false,
+  isSidenavExpanded: false
 }
 
 export function systemReducer (state = initialState, action = {}) {
@@ -11,6 +13,8 @@ export function systemReducer (state = initialState, action = {}) {
       return { ...state, isLoading: true }
     case LOADING_DONE:
       return { ...state, isLoading: false }
+    case TOGGLE_SIDENAV:
+      return { ...state, isSidenavExpanded: !state.isSidenavExpanded }
     default: return state
   }
 }

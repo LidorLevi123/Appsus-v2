@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
+import { store } from '../store/store'
+import { TOGGLE_SIDENAV } from '../store/reducers/system.reducer'
 
 export function AppHeader() {
 	const user = useSelector(storeState => storeState.userModule.user)
@@ -18,9 +20,14 @@ export function AppHeader() {
 		}
 	}
 
+	function onToggleSidebar() {
+		store.dispatch({ type: TOGGLE_SIDENAV })
+	}
+
 	return (
-		<header className="app-header main-layout full">
+		<header className="app-header">
 			<nav>
+				<button onClick={onToggleSidebar}>🍔</button>
 				<NavLink to="" className="logo">
 					E2E Demo
 				</NavLink>
