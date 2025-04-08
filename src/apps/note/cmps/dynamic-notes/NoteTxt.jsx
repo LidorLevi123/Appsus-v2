@@ -1,8 +1,8 @@
 export function NoteTxt({ info }) {
     return (
-        <article className="note-txt">
+        <section className="note-txt note-layout">
             { info.title && <h2 className="title">{info.title}</h2> }
             <pre className="txt">{info.txt}</pre>
-        </article>
+        </section>
     )
 }

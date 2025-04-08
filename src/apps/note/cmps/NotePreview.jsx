@@ -16,7 +16,6 @@ function DynamicCmp({ note }) {
         'NoteImg': <NoteImg { ...note } />,
         'NoteTodos': <NoteTodos { ...note } />
     }
-    console.log('data', note)
     
     return cmpMap[note.type]
 }
