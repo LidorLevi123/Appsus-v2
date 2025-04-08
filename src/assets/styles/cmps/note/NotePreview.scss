@@ -1,0 +1,45 @@
+.note-preview {
+    $note-gap-vertical: rem(12px);
+    $note-gap-horizontal: rem(16px);
+    $note-border-radius: 8px;
+
+    border: 1px solid #e0e0e0;
+    border-radius: $note-border-radius;
+
+    &:hover {
+        box-shadow: 
+            0 1px 2px 0 #3c40434d,
+            0 1px 3px 1px #3c404326;
+    }
+
+    > .note-layout {
+        display: grid;
+        gap: $note-gap-vertical;
+    }
+
+    .title, .txt {
+        margin-inline: $note-gap-horizontal;
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
+    }
+
+    .title {
+        @include font(1rem, 500);
+    }
+
+    .txt {
+        @include font(rem(14px), 400);
+    }
+
+    .note-txt {
+        padding-block: $note-gap-vertical;
+    }
+
+    .note-img {
+        padding-block-end: $note-gap-vertical;
+
+        img {
+            border-top-left-radius: $note-border-radius;
+            border-top-right-radius: $note-border-radius;
+        }
+    }
+}

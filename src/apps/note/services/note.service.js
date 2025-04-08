@@ -91,26 +91,27 @@ function _createNotes() {
             type: 'NoteImg',
             isPinned: false,
             info: {
-                url: 'http://some-img/me',
-                title: 'Bobi and Me'
+                url: 'https://res.cloudinary.com/dvpkhwyxp/image/upload/v1741725640/23_ras2g2.png',
+                title: 'Bobi and Me',
+                txt: 'sure its all'
             },
             style: {
                 backgroundColor: '#00d'
             }
         },
-        {
-            id: 'n103',
-            createdAt: 1112224,
-            type: 'NoteTodos',
-            isPinned: false,
-            info: {
-                title: 'Get my stuff together',
-                todos: [
-                    { txt: 'Driving license', doneAt: null },
-                    { txt: 'Coding power', doneAt: 187111111 }
-                ]
-            }
-        }
+        // {
+        //     id: 'n103',
+        //     createdAt: 1112224,
+        //     type: 'NoteTodos',
+        //     isPinned: false,
+        //     info: {
+        //         title: 'Get my stuff together',
+        //         todos: [
+        //             { txt: 'Driving license', doneAt: null },
+        //             { txt: 'Coding power', doneAt: 187111111 }
+        //         ]
+        //     }
+        // }
     ]
 
     saveToStorage(STORAGE_KEY, notes)

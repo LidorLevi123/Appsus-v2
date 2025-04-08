@@ -1,0 +1,7 @@
+.note-list {
+    columns: 220px auto;
+
+    > * {
+        break-inside: avoid;
+    }
+}
