@@ -1,10 +1,14 @@
 import { MailPreview } from "./MailPreview";
 
-export function MailList(mails) {
+export function MailList({ mails }) {
     return (
         <section className="mail-list">
-            mail list
-            <MailPreview mails={mails} />
+            <ul>
+                {mails.map(mail => {
+                    // return <li key={mail.id}>{mail.subject}</li>
+                    return <MailPreview mail={mail} />
+                })}
+            </ul>
         </section>
     )
 }
