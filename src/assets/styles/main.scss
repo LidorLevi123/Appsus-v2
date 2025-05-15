@@ -10,12 +10,20 @@
 @import "basics/base";
 
 // Pages
-@import "pages/NoteIndex";
+
+// notes
+@import "pages/note/NoteIndex.scss";
+
+// mails 
+@import "pages/mail/MailIndex";
 
 // Components
 @import "cmps/AppHeader";
 @import "cmps/UserMsg";
 
-// Note
+// Note Cmp
 @import "cmps/note/NoteList.scss";
-@import "cmps/note/NotePreview.scss"
+@import "cmps/note/NotePreview.scss";
+
+// Mail cmp 
+@import "cmps/mail/MailAppHeader";

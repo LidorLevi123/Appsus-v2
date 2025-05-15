@@ -1,0 +1,102 @@
+.mail-header-container {
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    padding: 8px;
+    height: 64px;
+
+    .logo-container {
+
+        button {
+            width: rem(48px);
+            height: rem(48px);
+            padding: rem(12px);
+            margin-inline: rem(4px);
+
+            span {
+                color: #5f6368;
+            }
+
+
+            &:hover {
+                background-color: rgba(60, 64, 67, .08);
+                border-radius: 50%;
+            }
+
+            &:active {
+                background-color: rgba(60, 64, 67, .12);
+            }
+
+
+        }
+
+        .logo {
+            img {
+                width: rem(93px);
+                height: rem(44px);
+            }
+        }
+    }
+
+    .search-container {
+        display: grid;
+        grid-template-columns: rem(46px) 1fr auto;
+        background-color: #E9EEF6;
+        border-radius: 24px;
+        height: rem(49px);
+        max-width: rem(720px);
+
+        input {
+            background: transparent;
+            border: unset;
+            // max-width: rem(580px);
+            // width: 100%;
+            font-size: 1rem;
+
+            &::placeholder {
+                font-weight: 500;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            width: rem(56px);
+            height: rem(46px);
+            padding-inline: rem(5px);
+
+            span {
+                padding: 8px;
+                margin: 3px;
+
+                &:hover {
+                    background-color: rgba(60, 64, 67, .08);
+                    border-radius: 50%;
+                }
+
+                &:active {
+                    background-color: rgba(60, 64, 67, .12);
+                }
+            }
+
+        }
+
+        .reset-btn {
+            width: rem(46px);
+        }
+
+
+    }
+
+    button {
+        background: transparent;
+
+    }
+
+    &:has(input:focus) {
+        background-color: white;
+    }
+
+}

@@ -21,13 +21,14 @@ export function MailIndex() {
     if (!mails.length) return <div>no mails</div>
 
     return (
-        <>
+        <section className="mail-index ">
+
             <MailAppHeader />
-            <section className="mail-index main-layout">
-                <section className={`sidenav ${sidenavClass}`}>MAIL SIDENAV</section>
+            <section className="main-layout">
+                <section className={`sidenav ${sidenavClass}`}>MAIL SIDENAV </section>
                 <MailList mails={mails} />
             </section>
-        </>
+        </section>
     )
 }
 
