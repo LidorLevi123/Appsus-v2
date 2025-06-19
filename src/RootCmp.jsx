@@ -13,13 +13,15 @@ import { MailIndex } from './apps/mail/pages/MailIndex.jsx'
 export function RootCmp() {
     return (
         <div className="app-layout">
-            <AppHeader />
+            {/* <AppHeader /> */}
             <main>
                 <Routes>
-                    <Route path="" element={<HomePage />} />
+                    {/* <Route path="" element={<HomePage />} /> */}
+                    <Route path="" element={<MailIndex />} />
                     <Route path="about" element={<AboutPage />} />
                     <Route path="note" element={<NoteIndex />} />
                     <Route path="mail" element={<MailIndex />} />
+                    <Route path="mail/:folder" element={<MailIndex />} />
                 </Routes>
             </main>
 

@@ -1,36 +1,37 @@
 // .app-layout {
-    // display: grid;
-    // grid-template-rows: 65px 1fr;
-    // min-height: 100vh;
-    // height: 75px;
+// display: grid;
+// grid-template-rows: 65px 1fr;
+// min-height: 100vh;
+// height: 75px;
 
-    // @include for-narrow-layout {
-    //         grid-template-columns: 
-    //             minmax(20px, 1fr)
-    //             minmax(auto, $mobile-breakpoint)
-    //             minmax(20px, 1fr);
-    // }
+// @include for-narrow-layout {
+//         grid-template-columns: 
+//             minmax(20px, 1fr)
+//             minmax(auto, $mobile-breakpoint)
+//             minmax(20px, 1fr);
+// }
 
-    // @include for-normal-layout {
-    //         grid-template-columns: 
-    //             minmax(20px, 1fr)
-    //             minmax(auto, $narrow-breakpoint)
-    //             minmax(20px, 1fr);
-    // }
+// @include for-normal-layout {
+//         grid-template-columns: 
+//             minmax(20px, 1fr)
+//             minmax(auto, $narrow-breakpoint)
+//             minmax(20px, 1fr);
+// }
 
-    // @include for-wide-layout {
-    //         grid-template-columns: 
-    //             minmax(20px, 1fr)
-    //             minmax(auto, $normal-breakpoint)
-    //             minmax(20px, 1fr);
-    // }
+// @include for-wide-layout {
+//         grid-template-columns: 
+//             minmax(20px, 1fr)
+//             minmax(auto, $normal-breakpoint)
+//             minmax(20px, 1fr);
+// }
 // }
 
 .main-layout {
     display: grid;
     grid-template-columns: auto 1fr;
     min-height: calc(100vh - 65px);
-    > * {
-        border: 1px solid black;
+
+    >* {
+        // border: 1px solid black;
     }
 }

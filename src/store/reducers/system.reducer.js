@@ -4,7 +4,8 @@ export const TOGGLE_SIDENAV = 'TOGGLE_SIDENAV'
 
 const initialState = {
   isLoading: false,
-  isSidenavExpanded: false
+  isSidenavExpanded: false,
+  isSidenavForcedOpen: false
 }
 
 export function systemReducer(state = initialState, action = {}) {
@@ -14,7 +15,9 @@ export function systemReducer(state = initialState, action = {}) {
     case LOADING_DONE:
       return { ...state, isLoading: false }
     case TOGGLE_SIDENAV:
-      return { ...state, isSidenavExpanded: action['isOpen'] === false ? action['isOpen'] : !state.isSidenavExpanded }
+      let status = action['isOpen'] === false ? action['isOpen'] : !state.isSidenavExpanded
+      if (action['isOpen'] === true) status = true
+      return { ...state, isSidenavExpanded: status, isSidenavForcedOpen: action.isForced ?? state.isSidenavForcedOpen }
     default: return state
   }
 }

@@ -1,25 +1,27 @@
+import { useDispatch, useSelector } from "react-redux"
 import { TOGGLE_SIDENAV } from "../../../store/reducers/system.reducer"
 import { store } from "../../../store/store"
-import gmailLogo from '../../../../public/img/gmailLogo.svg'
+import gmailLogo from '/public/img/gmailLogo.svg'
 import { useRef, useState } from "react"
 
 export function MailAppHeader() {
-    const [isinputExist, setIsinputExist] = useState(false)
+    const [isInputExist, setisInputExist] = useState(false)
+    const isForcedOpen = useSelector(state => state.systemModule.isSidenavForcedOpen)
     const inputRef = useRef().current
+    const dispatch = useDispatch()
 
     function onToggleSidebar() {
-        store.dispatch({ type: TOGGLE_SIDENAV })
+        dispatch({ type: TOGGLE_SIDENAV, 'isForced': !isForcedOpen })
     }
 
     function onCheckInput(event) {
-        console.log(event.target.value);
         const value = event.target.value
-        setIsinputExist(!!value)
+        setisInputExist(!!value)
     }
 
     function onFormReset() {
         setTimeout(() => {
-            setIsinputExist(false)
+            setisInputExist(false)
         }, 0)
     }
 
@@ -46,11 +48,12 @@ export function MailAppHeader() {
 
                 <input type="text" placeholder="Search mail" onInput={onCheckInput} ref={inputRef} />
                 <div className="flex">
-                    {isinputExist && <button type="reset" className="reset-btn">
+                    {isInputExist && <button type="reset" className="reset-btn">
                         <span class="material-symbols-outlined icon">
                             close
                         </span>
                     </button>}
+
                     <button>
 
                         <span class="material-symbols-outlined icon">

@@ -16,6 +16,7 @@ h5,
 h6,
 pre {
     margin: 0;
+    font-weight: 500;
 }
 
 img {
@@ -24,7 +25,7 @@ img {
 }
 
 p {
-    margin: 0 0 1em;
+    margin: 0 0 0;
 }
 
 a {
@@ -63,3 +64,16 @@ button {
 .icon {
     color: $iconMailClr;
 }
+
+// .material-symbols-outlined {
+
+.sidenav-svg {
+
+    span:focus {
+
+        // &.filled {
+        font-variation-settings: 'FILL' 1 // }
+    }
+}
+
+// }

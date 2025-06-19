@@ -54,7 +54,10 @@
             font-size: 1rem;
 
             &::placeholder {
-                font-weight: 500;
+                // font-weight: 500;
+                font-family: productSana;
+                // font-weight: 600;
+                // margin-right: 10px;
             }
 
             &:focus {
@@ -64,11 +67,12 @@
 
         button {
             width: rem(56px);
-            height: rem(46px);
+            // height: rem(46px);
             padding-inline: rem(5px);
+            margin-inline-start: -3px;
 
             span {
-                padding: 8px;
+                padding: 6px;
                 margin: 3px;
 
                 &:hover {

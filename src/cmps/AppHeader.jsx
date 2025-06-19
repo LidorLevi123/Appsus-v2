@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useLocation, useNavigate } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
@@ -13,9 +13,12 @@ export function AppHeader() {
 	// const toggle = useSelector(storeState => storeState.systemModule.isSidenavExpanded)
 	// const navigate = useNavigate()
 	const location = useLocation()
+	const pathSegments = location.pathname.split('/')
 
 	useEffect(() => {
-		store.dispatch({ type: TOGGLE_SIDENAV, isOpen: false })
+		const isInMailFolder = pathSegments[1] === 'mail'
+		const isOpen = isInMailFolder && pathSegments[2] ? true : false
+		store.dispatch({ type: TOGGLE_SIDENAV, isOpen })
 	}, [location])
 
 	// async function onLogout() {

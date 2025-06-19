@@ -1,10 +1,12 @@
+import { useDispatch } from "react-redux"
 import { TOGGLE_SIDENAV } from "../../../store/reducers/system.reducer"
-import { store } from "../../../store/store"
 
 export function NoteAppHeader() {
+    const dispatch = useDispatch()
+
 
     function onToggleSidebar() {
-        store.dispatch({ type: TOGGLE_SIDENAV })
+        dispatch({ type: TOGGLE_SIDENAV })
     }
 
     return (
