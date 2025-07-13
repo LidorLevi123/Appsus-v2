@@ -3,6 +3,7 @@ import { TOGGLE_SIDENAV } from "../../../store/reducers/system.reducer"
 import { store } from "../../../store/store"
 import gmailLogo from '/public/img/gmailLogo.svg'
 import { useRef, useState } from "react"
+import { sideNavSvgs } from "./MailSvg"
 
 export function MailAppHeader() {
     const [isInputExist, setisInputExist] = useState(false)
@@ -27,6 +28,8 @@ export function MailAppHeader() {
 
     return (
         <section className="mail-header-container">
+
+
 
             <div className="logo-container flex">
                 <button title="Main-menu" onClick={onToggleSidebar}>

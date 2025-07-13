@@ -1,49 +1,52 @@
 .sidenav {
 
-    .compose-container {
+    transition: width .15s cubic-bezier(0.4, 0, 0.2, 1);
 
-        padding-inline-start: 8px;
-        margin: 8px 0 16px 0;
 
-        .compose {
-            align-items: center;
-            height: 56px;
-            justify-content: center;
+    .compose {
+        margin: 8px 0 16px 8px;
+        align-items: center;
+        height: 56px;
+        width: 56px;
+        border-radius: 16px;
+        background-color: #c2e7ff;
+
+        span {
             width: 56px;
-            border-radius: 16px;
-            background-color: #c2e7ff;
-            transition: width .15s cubic-bezier(0.4, 0, 0.2, 1), padding .15s cubic-bezier(0.4, 0, 0.2, 1);
-
-
-            span {
-
-                color: rgb(32, 33, 36);
-            }
-
+            padding-inline: 15px;
+            color: rgb(32, 33, 36);
         }
-
 
     }
 
+    /// DORE
 
     .folders-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        // align-items: center;
 
         .folder-box {
+            display: flex;
+            margin-inline-end: 2em;
+            align-items: center;
+            height: 32px;
 
             .folder-preview {
-                display: grid;
-                align-items: center;
-                justify-content: center;
+                // display: grid;
+                // grid-template-columns: 40px auto 1fr;
                 width: 32px;
-                height: 32px;
+                height: 2em;
+                display: flex;
                 border-radius: 16px;
-                transition: width .25s cubic-bezier(0.4, 0, 0.2, 1), padding .25s cubic-bezier(0.4, 0, 0.2, 1);
-
+                align-items: center;
+                justify-items: center;
+                margin-inline-start: 20px;
 
                 span {
+                    width: 40px;
+                    padding-inline: 7px;
                     color: rgb(95, 99, 104);
                     font-size: 19px !important;
                 }
@@ -53,6 +56,8 @@
                     font-size: 14px;
 
                     &.folder-number {
+                        padding-inline: 96px 12px;
+                        margin: auto;
                         font-size: 12px;
                     }
                 }
@@ -69,31 +74,84 @@
                         font-variation-settings: 'FILL' 1;
                     }
                 }
-
-
-
             }
 
         }
 
     }
 
+    // .folders-container {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+
+    //     .folder-box {
+
+    //         .folder-preview {
+    //             display: grid;
+    //             align-items: center;
+    //             grid-template-columns: 40px auto 1fr;
+    //             // justify-content: center;
+    //             width: 32px;
+    //             height: 32px;
+    //             border-radius: 16px;
+    //             justify-items: start;
+    //             // transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+    //             // transition: width 3s cubic-bezier(0.4, 0, 0.2, 1);
+    //             // transition: width .25s cubic-bezier(0.4, 0, 0.2, 1), padding .25s cubic-bezier(0.4, 0, 0.2, 1);
+    //             // transition: width 3s cubic-bezier(0.4, 0, 0.2, 1), padding .25s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+    //             span {
+    //                 width: 40px;
+    //                 padding-inline: 7px;
+    //                 color: rgb(95, 99, 104);
+    //                 font-size: 19px !important;
+    //             }
+
+    //             P {
+    //                 color: $sideNavFontClr;
+    //                 font-size: 14px;
+
+    //                 &.folder-number {
+    //                     padding-inline: 96px 12px;
+    //                     margin: auto;
+    //                     font-size: 12px;
+    //                 }
+    //             }
+
+    //             &:hover {
+    //                 background-color: rgba(32, 33, 36, 0.06);
+    //             }
+
+    //             &.active {
+    //                 background-color: #d3e3fd;
+
+    //                 span {
+    //                     color: #001d35;
+    //                     font-variation-settings: 'FILL' 1;
+    //                 }
+    //             }
+    //         }
+
+    //     }
+
+    // }
+
+
     &.expanded {
+        // width: 240px;
 
         .compose {
             width: 142px;
             padding-inline-end: 24px;
 
+
             &:hover {
 
                 box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
                 transition: box-shadow .08s linear, min-width .15s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            span {
-                display: flex;
-                justify-content: center;
-                width: 56px;
             }
 
             h2 {
@@ -104,27 +162,32 @@
         }
 
         .folder-box {
-            width: 100%;
+            // width: 100%;
+            // background-color: #d3e3fd;
+            border-radius: 0 16px 16px 0;
+
 
             .folder-preview {
-                grid-auto-flow: column;
-                grid-template-columns: 40px auto 1fr;
+                // padding-inline-start: 16px;
                 width: 240px;
-                border-radius: 0 16px 16px 0;
-                padding-inline-start: 28px;
+
+                span {
+                    // padding: 0;
+                }
 
                 p {
                     letter-spacing: 1px;
                 }
 
                 .folder-number {
-                    padding-inline-end: 12px;
-                    justify-self: end;
+                    // padding-inline-end: 12px;
+                    // justify-self: end;
                     color: rgb(95, 99, 104);
                 }
             }
 
             &.active {
+                background-color: #d3e3fd;
 
                 p {
                     color: #001d35;
@@ -139,10 +202,268 @@
 
         }
 
-    }
+        // .folder-box {
+        //     width: 100%;
 
-    * {
-        cursor: pointer;
-    }
+        //     .folder-preview {
+        //         grid-auto-flow: column;
+        //         // grid-template-columns: 40px auto 1fr;
+        //         width: 240px;
+        //         border-radius: 0 16px 16px 0;
+        //         padding-inline-start: 28px;
 
+        //         span {
+        //             padding: 0;
+        //         }
+
+        //         p {
+        //             letter-spacing: 1px;
+        //         }
+
+        //         .folder-number {
+        //             // padding-inline-end: 12px;
+        //             // justify-self: end;
+        //             color: rgb(95, 99, 104);
+        //         }
+        //     }
+
+        //     &.active {
+
+        //         p {
+        //             color: #001d35;
+        //             font-weight: bold;
+        //         }
+
+        //         .folder-number {
+        //             color: #001d35;
+        //         }
+
+        //     }
+
+        // }
+    }
 }
+
+* {
+    cursor: pointer;
+}
+
+// .sidenav {
+
+//     /* Compose button styling */
+//     .compose {
+//         margin: 8px 0 16px 8px;
+//         display: flex;
+//         /* Ensure flex for centering */
+//         align-items: center;
+//         height: 56px;
+//         width: 56px;
+//         /* Initial width for collapsed state */
+//         border-radius: 16px;
+//         background-color: #c2e7ff;
+//         /* Unified transition for width and padding */
+//         transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding-inline-end 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+//         cursor: pointer;
+//         overflow: hidden;
+//         /* Hide overflow of text during transition */
+//         justify-content: center;
+//         /* Center content when collapsed */
+
+
+//         span {
+//             min-width: 56px;
+//             /* Ensure icon has a minimum width */
+//             padding-inline: 15px;
+//             color: rgb(32, 33, 36);
+//         }
+
+//         h2 {
+//             /* For compose text */
+//             font-size: 14px;
+//             overflow: hidden;
+//             /* Hide overflow during transition */
+//             max-width: 0;
+//             /* Initially collapsed */
+//             opacity: 0;
+//             /* Initially hidden */
+//             transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease-out;
+//             /* Smooth transition */
+//             white-space: nowrap;
+//             /* Prevent text wrapping */
+//             margin: 0;
+//             /* Remove default margin */
+//             padding-inline-end: 24px;
+//             /* Space from right edge when expanded */
+//         }
+//     }
+
+//     /* Folder container styling */
+//     .folders-container {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         /* Centers items when collapsed */
+//         width: 100%;
+
+//         .folder-box {
+//             width: 100%;
+//             /* Important: folder-box should always take full width */
+//             display: flex;
+//             /* Helps align content within folder-box */
+//             justify-content: center;
+//             /* Centers folder-preview when collapsed */
+
+//             .folder-preview {
+//                 display: grid;
+//                 align-items: center;
+//                 /* Consistent grid: icon (fixed), then a flexible column for text/number */
+//                 grid-template-columns: 40px 1fr;
+//                 width: 56px;
+//                 /* Initial width for collapsed state (icon width + padding) */
+//                 height: 32px;
+//                 border-radius: 16px;
+//                 justify-items: start;
+//                 /* Unified transition for smooth expansion/collapse of the preview box */
+//                 transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+//                     padding-inline-start 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+//                 overflow: hidden;
+//                 /* Critical to hide overflowing text during max-width transition */
+//                 padding-inline-start: 8px;
+//                 /* Initial padding for collapsed state */
+//                 white-space: nowrap;
+//                 /* Prevent text wrapping */
+//                 cursor: pointer;
+
+
+//                 span {
+//                     min-width: 40px;
+//                     /* Ensure icon has min width */
+//                     padding-inline: 7px;
+//                     color: rgb(95, 99, 104);
+//                     font-size: 19px !important;
+//                 }
+
+//                 .folder-text-wrapper {
+//                     /* New wrapper for folder title and number */
+//                     display: flex;
+//                     justify-content: space-between;
+//                     /* Space out title and number */
+//                     align-items: center;
+//                     overflow: hidden;
+//                     /* Hide overflow of text as it collapses */
+//                     max-width: 0;
+//                     /* Initially collapsed */
+//                     opacity: 0;
+//                     /* Initially hidden */
+//                     /* Transition for the text wrapper itself */
+//                     transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease-out;
+//                     flex-grow: 1;
+//                     /* Allow wrapper to grow within the grid column */
+//                 }
+
+//                 p {
+//                     color: $sideNavFontClr;
+//                     /* Assuming $sideNavFontClr is defined */
+//                     font-size: 14px;
+//                     margin: 0;
+//                     /* Remove default paragraph margin */
+//                     flex-shrink: 0;
+//                     /* Prevent title from shrinking */
+//                     padding-right: 12px;
+//                     /* Consistent right padding for text */
+
+
+//                     &.folder-number {
+//                         padding-inline-end: 12px;
+//                         /* Consistent right padding for number */
+//                         margin-left: auto;
+//                         /* Push number to the right within the wrapper */
+//                         font-size: 12px;
+//                         flex-shrink: 0;
+//                         /* Prevent number from shrinking */
+//                     }
+//                 }
+
+//                 &:hover {
+//                     background-color: rgba(32, 33, 36, 0.06);
+//                 }
+
+//                 &.active {
+//                     background-color: #d3e3fd;
+
+//                     span {
+//                         color: #001d35;
+//                         font-variation-settings: 'FILL' 1;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     /* Expanded sidenav styling */
+//     &.expanded {
+
+//         /* Compose button expanded state */
+//         .compose {
+//             width: 142px;
+//             padding-inline-end: 0;
+//             /* Padding is now inside h2 */
+//             justify-content: flex-start;
+//             /* Align content to start when expanded */
+
+//             h2 {
+//                 max-width: 100px;
+//                 /* Adjust to fit text, or use a larger value if needed */
+//                 opacity: 1;
+//                 /* Add a slight delay for text appearance, making it smoother */
+//                 transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, opacity 0.15s ease-in 0.1s;
+//             }
+
+//             &:hover {
+//                 box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+//                 transition: box-shadow .08s linear, width .15s cubic-bezier(0.4, 0, 0.2, 1);
+//             }
+//         }
+
+//         /* Folder box expanded state */
+//         .folder-box {
+//             justify-content: flex-start;
+//             /* Align folder-preview to start */
+
+//             .folder-preview {
+//                 width: 240px;
+//                 /* Expanded width */
+//                 border-radius: 0 16px 16px 0;
+//                 padding-inline-start: 28px;
+//                 /* Expanded padding */
+
+//                 .folder-text-wrapper {
+//                     max-width: 200px;
+//                     /* A sufficiently large max-width to show all text */
+//                     opacity: 1;
+//                     /* Add a slight delay for text appearance, making it smoother */
+//                     transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, opacity 0.15s ease-in 0.1s;
+//                 }
+
+//                 p {
+//                     letter-spacing: 0.5px;
+//                 }
+
+//                 &.active {
+//                     p {
+//                         color: #001d35;
+//                         font-weight: bold;
+//                     }
+
+//                     .folder-number {
+//                         color: #001d35;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// * {
+//     cursor: pointer;
+// }
