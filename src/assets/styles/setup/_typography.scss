@@ -1,9 +1,24 @@
 @font-face {
-    font-family: productSana;
-    src: url(/src/assets/fonts/ProductSans-Regular.ttf);
+    font-family: productSans;
+    src: url('/fonts/productSans/ProductSans-Regular.ttf');
 }
 
-// @font-face {
-//     // font-family: montserrat;
-//     // src: url(../../fonts/Montserrat/Montserrat-Regular.ttf);
-// }
+@font-face {
+    font-family: productSansBold;
+    src: url('fonts/productSans/Product\ Sans\ Bold.ttf');
+}
+
+@font-face {
+    font-family: robotoLight;
+    src: url('/fonts/roboto/Roboto_Condensed-Light.ttf');
+}
+
+@font-face {
+    font-family: robotoRegular;
+    src: url('/fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url('/fonts/roboto/Roboto-SemiBold.ttf');
+}
