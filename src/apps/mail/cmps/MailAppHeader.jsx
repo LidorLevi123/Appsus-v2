@@ -32,7 +32,7 @@ export function MailAppHeader() {
 
             <div className="logo-container flex">
                 <button title="Main-menu" onClick={onToggleSidebar}>
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         menu
                     </span>
                 </button>
@@ -43,7 +43,7 @@ export function MailAppHeader() {
 
             <form className="search-container" action="" onReset={onFormReset}>
                 <button className="search-btn">
-                    <span title="Search" class="material-symbols-outlined icon">
+                    <span title="Search" className="material-symbols-outlined icon">
                         search
                     </span>
                 </button>
@@ -51,14 +51,14 @@ export function MailAppHeader() {
                 <input type="text" placeholder="Search mail" onInput={onCheckInput} ref={inputRef} />
                 <div className="flex">
                     {isInputExist && <button type="reset" className="reset-btn">
-                        <span class="material-symbols-outlined icon">
+                        <span className="material-symbols-outlined icon">
                             close
                         </span>
                     </button>}
 
                     <button>
 
-                        <span class="material-symbols-outlined icon">
+                        <span className="material-symbols-outlined icon">
                             tune
                         </span>
                     </button>

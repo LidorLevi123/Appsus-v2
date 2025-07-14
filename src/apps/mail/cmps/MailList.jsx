@@ -6,7 +6,7 @@ export function MailList({ mails }) {
             <ul>
                 {mails.map(mail => {
                     // return <li key={mail.id}>{mail.subject}</li>
-                    return <MailPreview mail={mail} />
+                    return <MailPreview mail={mail} key={mail.id} />
                 })}
             </ul>
         </section>

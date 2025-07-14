@@ -1,13 +1,13 @@
 export function MailPreview({ mail }) {
     return (
-        <li key={mail.id} className="flex">
+        <li className="flex">
 
-            <div className="">
+            <div >
                 {/* <input type="checkbox" /> */}
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     check_box_outline_blank
                 </span>
-                <span class="material-symbols-outlined">star</span>
+                <span className="material-symbols-outlined">star</span>
             </div>
 
             <p>{mail.subject}</p>
@@ -15,12 +15,12 @@ export function MailPreview({ mail }) {
             <p>{mail.createdAt}</p>
 
             <div className="hover-btn-actions">
-                <span class="material-symbols-outlined">archive</span>
-                <span class="material-symbols-outlined">delete</span>
+                <span className="material-symbols-outlined">archive</span>
+                <span className="material-symbols-outlined">delete</span>
                 {mail.isRead ? (
-                    <span class="material-symbols-outlined">drafts</span>
+                    <span className="material-symbols-outlined">drafts</span>
                 ) : (
-                    <span class="material-symbols-outlined">mark_email_unread</span>
+                    <span className="material-symbols-outlined">mark_email_unread</span>
                 )}
             </div>
         </li >
