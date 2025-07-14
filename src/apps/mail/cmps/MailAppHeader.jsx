@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { TOGGLE_SIDENAV } from "../../../store/reducers/system.reducer"
 import { store } from "../../../store/store"
-import gmailLogo from '/public/img/gmailLogo.svg'
+import gmailLogo2 from '/imgs/gmailLogo2.png'
 import { useRef, useState } from "react"
 import { sideNavSvgs } from "./MailSvg"
 
@@ -30,7 +30,6 @@ export function MailAppHeader() {
         <section className="mail-header-container">
 
 
-
             <div className="logo-container flex">
                 <button title="Main-menu" onClick={onToggleSidebar}>
                     <span class="material-symbols-outlined">
@@ -38,7 +37,7 @@ export function MailAppHeader() {
                     </span>
                 </button>
                 <div title="Gmail" className="logo">
-                    <img src={gmailLogo} alt="" />
+                    <img src={gmailLogo2} alt="" />
                 </div>
             </div>
 
@@ -65,8 +64,6 @@ export function MailAppHeader() {
                     </button>
                 </div>
             </form>
-
-
         </section>
     )
 }
