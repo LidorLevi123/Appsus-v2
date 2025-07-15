@@ -1,4 +1,59 @@
 .mail-list {
+    margin-block-start: 104px;
     background-color: white;
     border-radius: 16px;
+
+    li {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: auto 168px 3fr 100px;
+        padding-block: 10px;
+        cursor: pointer;
+
+        span {
+            font-size: 19px !important;
+            color: rgb(95, 99, 104);
+            color: #c7c8c8;
+
+            &.box-icon {
+                padding-inline: rem(16px) rem(10px);
+            }
+
+            &.star-icon {
+                padding-inline-end: rem(10px);
+            }
+        }
+
+        p {
+            &.sender {
+                justify-self: start;
+                padding-inline-end: 32px;
+                width: 100%
+            }
+
+            &.content {
+                justify-self: start;
+                padding-inline-end: 10px;
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+            }
+
+            &.date {
+                padding-inline-end: 16px;
+                justify-self: end;
+            }
+        }
+
+        &:hover {
+            box-shadow: inset 1px 0 0 rgb(218, 220, 224), inset -1px 0 0 rgb(218, 220, 224), 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+
+            span {
+                color: rgb(95, 99, 104);
+            }
+
+        }
+    }
 }

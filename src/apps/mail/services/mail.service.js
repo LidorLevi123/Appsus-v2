@@ -62,23 +62,26 @@ function _createMails() {
         {
             id: makeId(),
             createdAt: new Date(),
-            subject: 'Miss you!',
+            subject: 'Calender for next week',
             body: 'Would love to catch up sometimes',
             isRead: false,
             sentAt: null,
             removedAt: null,
-            from: 'sharon@gmail.com',
+            from: 'DoreZ@gmail.com',
+            SenderName: 'Dore Z',
             to: 'reutEdry@gmail.com'
         },
         {
             id: makeId(),
             createdAt: new Date(),
             subject: 'New job offers',
-            body: 'new Full Stack job offers that you need to look at',
+            body: 'new Full Stack job offers that you need to look at, new Full Stack job offers that you need to look at, new Full Stack job offers that you need to look at, new Full Stack job offers that you need to look at',
             isRead: false,
             sentAt: null,
             removedAt: null,
             from: 'Linkdin@gmail.com',
+            SenderName: 'Linkdin',
+
             to: 'reutEdry@gmail.com'
         },
         {
@@ -90,6 +93,7 @@ function _createMails() {
             sentAt: null,
             removedAt: null,
             from: 'Moovit@gmail.com',
+            SenderName: 'Moovit',
             to: 'reutEdry@gmail.com'
         },
     ]

@@ -28,7 +28,7 @@
 
 .main-layout {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr 55px;
     min-height: calc(100vh - 65px);
 
     >* {
